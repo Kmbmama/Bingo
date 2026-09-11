@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Stream Bingo V4</title>
+<title>Mama's Affiliate Anniversary Bingo</title>
 <style>
 :root{--bg:#0d1512;--panel:#14211c;--panel2:#192b24;--text:#f4fff9;--muted:#a8c2b4;--line:#315343;--accent:#78e39f;--accent2:#b5ffd0;--good:#55d98a;--danger:#ff8f8f;--shadow:#0007}
 *{box-sizing:border-box}body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;background:radial-gradient(circle at top,#173127 0,#0d1512 45%);color:var(--text);min-height:100vh}
@@ -13,10 +13,36 @@ input,textarea,select{width:100%;border:1px solid var(--line);border-radius:10px
 .patterns{display:grid;grid-template-columns:repeat(auto-fit,minmax(135px,1fr));gap:8px}.patterns button.active{outline:2px solid var(--accent);background:#294a3a}.pattern-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:4px;max-width:270px}.pattern-cell{aspect-ratio:1;border:1px solid var(--line);background:#0f1b16;padding:0}.pattern-cell.on{background:var(--accent);box-shadow:inset 0 0 0 2px #d9ffe7}.saved-list{display:grid;gap:8px;margin-top:10px}.saved-item{display:flex;gap:8px;align-items:center;justify-content:space-between;padding:9px 10px;border:1px solid var(--line);border-radius:10px;background:#102019}.saved-item span{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.saved-actions{display:flex;gap:6px;flex-shrink:0}
 .card{display:grid;grid-template-columns:repeat(5,1fr);gap:7px;max-width:760px;margin:18px auto}.square{min-height:110px;border:1px solid #3b6a52;border-radius:11px;background:#f7fff9;color:#122018;padding:9px;display:flex;align-items:center;justify-content:center;text-align:center;cursor:pointer;font-size:14px;font-weight:750;line-height:1.25;position:relative}.square.marked{background:#91efb4;border-color:#d9ffe7;text-decoration:line-through}.square.marked:after{content:"✓";position:absolute;top:5px;right:7px;font-size:18px}.square.free{background:#d8ffe5}.winner{padding:16px;border-radius:12px;background:#163c28;border:1px solid var(--good);color:#d9ffe7;font-weight:850;text-align:center;font-size:21px;animation:pop .25s ease-out}.hidden{display:none!important}.linkbox,.claimbox{word-break:break-all;background:#0d1813;padding:10px;border:1px solid var(--line);border-radius:9px;font-size:13px}.notice{padding:11px;border-left:3px solid var(--accent);background:#102019;border-radius:8px}.verify-ok{border-color:var(--good)!important}.verify-bad{border-color:var(--danger)!important}.pill{display:inline-block;padding:4px 8px;border-radius:999px;background:#254433;color:var(--accent2);font-size:12px;font-weight:800}.viewer-top{display:flex;gap:10px;justify-content:space-between;align-items:flex-start;flex-wrap:wrap}.viewer-meta{text-align:right}.modal{position:fixed;inset:0;background:#000b;display:grid;place-items:center;padding:18px;z-index:20}.modal-card{width:min(520px,100%);background:var(--panel2);border:1px solid var(--line);border-radius:16px;padding:20px;box-shadow:0 20px 60px #000}.claim-details{display:grid;gap:6px;margin-top:10px}.claim-details div{padding:7px 9px;background:#0f1b16;border-radius:8px}.mini-card{display:grid;grid-template-columns:repeat(5,1fr);gap:3px;max-width:360px}.mini-cell{aspect-ratio:1;border:1px solid var(--line);border-radius:4px;font-size:8px;overflow:hidden;padding:2px;display:flex;align-items:center;justify-content:center;text-align:center;background:#f7fff9;color:#122018}.mini-cell.marked{background:#91efb4}.mini-cell.req{outline:2px solid #ffe27a;outline-offset:-2px}@keyframes pop{from{transform:scale(.96);opacity:.3}to{transform:scale(1);opacity:1}}
 @media(max-width:600px){header{padding:13px}.wrap{padding:0 8px;margin:12px auto}.panel{padding:13px;border-radius:13px}.square{min-height:74px;font-size:10px;padding:4px}.square.marked:after{font-size:14px;top:2px;right:4px}.card{gap:4px}.viewer-meta{text-align:left}.row>*{flex:1 1 auto}}
+
+/* V4.1 enchanted forest visual theme — mechanics unchanged */
+:root{--bg:#07100c;--panel:#101d17;--panel2:#172a20;--text:#f7fff7;--muted:#b8cfbf;--line:#46684d;--accent:#8cff57;--accent2:#d7ffad;--good:#79ef9f;--danger:#ff9b9b;--purple:#b96cff;--gold:#f3d98a;--shadow:#0009}
+body{background:
+ radial-gradient(circle at 12% 10%,#29331755 0 9%,transparent 24%),
+ radial-gradient(circle at 88% 8%,#542a7040 0 7%,transparent 20%),
+ radial-gradient(circle at 50% 0,#173824 0,#08130e 42%,#050a08 100%);}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.34;background-image:radial-gradient(circle,#baff8c 0 1px,transparent 1.7px),radial-gradient(circle,#c788ff 0 1px,transparent 1.8px);background-size:83px 83px,127px 127px;background-position:17px 24px,63px 10px;z-index:-1}
+header{background:linear-gradient(180deg,#07100cf2,#0b1711e8);border-bottom:1px solid #608259;box-shadow:0 8px 30px #0009,0 1px 0 #a4ff7655}
+.brand-dot{width:28px;height:28px;display:grid;place-items:center;color:#eaffd8;background:radial-gradient(circle,#9cff61 0 18%,#2c6c31 48%,#17271c 70%);border:1px solid #a8ff78;box-shadow:0 0 18px #79ff72aa,0 0 28px #b467ff44;font-size:13px}
+.brand h1{font-family:Georgia,'Times New Roman',serif;font-size:21px;text-shadow:0 0 14px #79ff7255}.brand-sub{font-size:10px;color:#d1b0ff;text-transform:uppercase;letter-spacing:1.5px;margin-top:2px}
+.panel{position:relative;overflow:hidden;background:linear-gradient(180deg,#192b21f2,#0f1c16f5);border:1px solid #527255;border-radius:18px;box-shadow:0 14px 35px #0009,inset 0 1px 0 #caff9a1c}
+.panel:before{content:"";position:absolute;left:0;right:0;top:0;height:3px;background:linear-gradient(90deg,transparent,#77e95f,#c070ff,#77e95f,transparent);opacity:.65}
+h2,h3{font-family:Georgia,'Times New Roman',serif;color:#f6ffe8;text-shadow:0 0 10px #7eff6540}
+button{background:linear-gradient(180deg,#294533,#1a3024);border-color:#587a5d;box-shadow:inset 0 1px 0 #ffffff10,0 4px 12px #0005}button.primary,button.good{background:linear-gradient(180deg,#a0ff69,#6dde71);color:#0b1b0e;border-color:#c9ff9e;box-shadow:0 0 16px #7eff6c35}button.danger{background:linear-gradient(180deg,#573030,#3d2424)}
+input,textarea,select,.linkbox,.claimbox{background:#09130fdd;border-color:#46684d;box-shadow:inset 0 1px 5px #0007}input:focus,textarea:focus,select:focus{outline:2px solid #9bff6a88;border-color:#9bff6a}
+.stat,.saved-item,.notice,.claim-details div{background:#0b1811e8;border-color:#46684d}.stat b{color:#baff8c}.pill{background:#24432f;border:1px solid #4f7555;color:#caffae;box-shadow:0 0 10px #74e85b22}
+.patterns button.active{outline-color:#a0ff70;background:linear-gradient(180deg,#385d42,#284633);box-shadow:0 0 16px #8cff5740}.pattern-cell.on{background:linear-gradient(135deg,#83f46f,#b876ff);box-shadow:inset 0 0 0 2px #eaffda}
+.card{padding:14px;border-radius:20px;background:linear-gradient(145deg,#18281fdd,#0c1711dd);border:1px solid #58775a;box-shadow:0 18px 45px #0008,0 0 25px #864ec322}
+.square{border:2px solid #3e674b;background:linear-gradient(145deg,#fbfff8,#eaf6e9);box-shadow:0 5px 10px #0004;color:#142017}.square:hover{transform:translateY(-1px);border-color:#80bd6d}.square.marked{background:linear-gradient(145deg,#a8f39a,#7edc9d);border-color:#d9ffc6;box-shadow:0 0 13px #7aff7644}.square.free{background:linear-gradient(145deg,#e1ffd0,#cdb1ff);border-color:#c7ff9b}
+.winner{background:linear-gradient(135deg,#1b4b29,#3c2455);border:1px solid #a5ff75;color:#f3ffe8;box-shadow:0 0 24px #81ff7040,0 0 20px #b266ff33;text-shadow:0 0 10px #fff4}
+.modal{background:#020805dd}.modal-card{background:linear-gradient(180deg,#1b2d22,#0d1913);border-color:#6a8b62;box-shadow:0 24px 70px #000,0 0 30px #9b5ee322}
+#joinView .panel{border-color:#6d8b61;box-shadow:0 20px 60px #000b,0 0 40px #77e65c1d,0 0 30px #a55ee51c}#joinView h2:before{content:"✦ ";color:#c884ff}#joinView h2:after{content:" ✦";color:#9cff72}
+#claimsList>.panel{border-left:4px solid #8cff67}.mini-cell.req{outline-color:var(--gold)}
+@media(max-width:600px){.brand-sub{display:none}.brand h1{font-size:16px}.brand-dot{width:23px;height:23px}.card{padding:6px;border-radius:12px}.panel:before{height:2px}}
+
 </style>
 </head>
 <body>
-<header><div class="brand"><span class="brand-dot"></span><h1>Stream Bingo V4</h1></div><span id="modeLabel" class="pill"></span></header>
+<header><div class="brand"><span class="brand-dot">✦</span><div><h1>Mama's Affiliate Anniversary Bingo</h1><div class="brand-sub">enchanted stream edition • V4.1</div></div></div><span id="modeLabel" class="pill"></span></header>
 <div class="wrap">
 <section id="hostView">
 <div class="panel"><h2>Game setup</h2><p class="muted">Everything on this host page is saved in this browser automatically.</p><div class="row"><div class="field"><label class="muted">Game name</label><input id="gameName" value="Anniversary Bingo"></div><div class="field small"><label class="muted">Center square</label><select id="freeSpace"><option value="on">FREE</option><option value="off">Use a pool item</option></select></div></div></div>
